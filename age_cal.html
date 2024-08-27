@@ -21,20 +21,20 @@
           document.getElementById("message").innerHTML = "Please enter a date!";
           return false;
         } else {
-          //calculate month difference from current date in time
+          //calculate month from current date
           var month_diff = Date.now() - dob.getTime();
           console.log(month_diff);
           console.log(dob);
 
-          //convert the calculated difference in date format
+          //convert the calculated date
           var age_dt = new Date(month_diff);
           console.log(age_dt);
 
-          //extract year from date
+          //educe year from date
           var year = age_dt.getUTCFullYear();
           console.log(year);
 
-          //now calculate the age of the user
+          //calculate age of the user
           var age = year - 1970;
 
           //display the calculated age
@@ -92,7 +92,7 @@
           Calculate Age from Date of Birth
         </h2>
 
-        <!-- Choose a date and enter the input field -->
+        <!-- select a date and enter -->
         <div class="size">
           Enter Date of Birth:
           <input class="pad" type="date" id="DOB" />
@@ -100,7 +100,7 @@
         <span id="message" style="color: black"> </span>
         <br /><br />
 
-        <!-- Choose a date and enter the input field -->
+        <!-- select a date and enter -->
         <button class="btn" type="submit" onclick="ageCalculator()">
           Calculate age
         </button>
